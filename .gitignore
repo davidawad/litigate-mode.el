@@ -1,0 +1,3 @@
+*.elc
+.worktrees/
+.DS_Store

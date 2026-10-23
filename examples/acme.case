@@ -1,0 +1,27 @@
+case acme-v-widget
+uses frcp-rule12-example ^0.1.0
+as_of 2025-06-01
+summary "Acme sues Widget; Widget decides whether to answer or move to dismiss."
+notes "Worked example for SPEC §12. Stakes are illustrative."
+
+source "Federal Rules of Civil Procedure" {
+  url "https://www.law.cornell.edu/rules/frcp"
+  as_of 2024-12-01
+}
+
+perspective widget
+
+parties {
+  acme: Plaintiff Corporation
+  widget: Defendant Corporation
+}
+
+events {
+  2025-03-05 Served(complaint, Personal) on widget
+  2025-03-20 MovedToDismiss(complaint) by widget
+}
+
+facts { time-barred: not-barred }
+stakes { judgment-entered: -2_000_000.usd, dismissed: 0.usd }
+beliefs { observe mtd-ruling: { granted: 3, denied: 1 } }
+analysis { params: { rate: 650, opp_rate: 550 } }

@@ -1,0 +1,24 @@
+# Worked-example package for SPEC §10. Not a migrated pack.
+[package]
+name = "frcp-rule12-example"
+version = "0.1.0"
+language = 1
+pack_id = "frcp-rule12-example"
+forum = "frcp"
+authority = "FederalRule"
+title = "FRCP Rule 12 response (worked example)"
+description = "Answer-or-move decision under FRCP 12(a); the shared W1 fixture."
+jurisdiction = "United States district courts"
+in_force = "2009-12-01"
+known_at = "2025-01-01"
+
+[package.roles]
+Plaintiff = "self"
+Defendant = "opponent"
+Court = "nature"
+
+[sources.frcp]
+title = "Federal Rules of Civil Procedure"
+url = "https://www.law.cornell.edu/rules/frcp"
+as_of = "2024-12-01"
+cite_prefixes = ["FRCP"]
